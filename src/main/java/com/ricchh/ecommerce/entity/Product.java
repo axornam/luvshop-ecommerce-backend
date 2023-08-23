@@ -2,18 +2,11 @@ package com.ricchh.ecommerce.entity;
 
 import java.util.Date;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Data;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "product")
@@ -48,7 +41,7 @@ public class Product {
   private boolean active;
 
   @Column(name = "units_in_stock")
-  private int unitInStock;
+  private int unitsInStock;
 
   @Column(name = "date_created")
   @CreationTimestamp
